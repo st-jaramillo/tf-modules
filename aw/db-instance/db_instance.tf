@@ -1,5 +1,5 @@
-resource "aws_db_instance" "aw_dbins-websrvclualb" {
-  identifier_prefix   = "${var.env}-${var.engine}-db-websrvclualb"
+resource "aws_db_instance" "aw_db-instance" {
+  identifier_prefix   = "${var.env}-${var.engine}-db-instance"
   engine              = var.engine
   allocated_storage   = var.allocated_storage
   instance_class      = var.instance_class
