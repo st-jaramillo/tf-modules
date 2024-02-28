@@ -1,7 +1,7 @@
-resource "aws_launch_configuration" "aw_laun-conf_lx" {
+resource "aws_launch_configuration" "aw_laun-conf" {
 
-  image_id      = var.image_id
-  instance_type = var.instance_type
+  image_id      = var.vr_image-id
+  instance_type = var.vr_instance-type
 
   security_groups = [aws_security_group.aw_sg_instances.id]
 
@@ -17,9 +17,9 @@ resource "aws_launch_configuration" "aw_laun-conf_lx" {
 */
 
   user_data = templatefile("${path.module}/userdata_launchconf.sh", {
-    userdata_serverport = var.srv_port_http
-    userdata_dbaddress  = data.terraform_remote_state.aw_d-tfstateremo-db.outputs.outp_websrvclualb-mys-address-prod
-    userdata_dbport     = data.terraform_remote_state.aw_d-tfstateremo-db.outputs.outp_websrvclualb-mys-port-prod
+    userdata_serverport = var.vr_srvporthttp
+    userdata_dbaddress  = data.terraform_remote_state.ds-tfstateremo-db.outputs.op_srvclualbdb-predbmysaddress
+    userdata_dbport     = data.terraform_remote_state.ds-tfstateremo-db.outputs.op_srvclualbdb-predbmysport
   })
 
   lifecycle {

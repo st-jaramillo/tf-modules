@@ -1,15 +1,15 @@
-data "aws_vpc" "aw_d-vpc-default" {
+data "aws_vpc" "ds_vpc-default" {
   default = true
 }
 
-data "aws_subnets" "aw_d-subn-vpc-default" {
+data "aws_subnets" "ds_subn-vpc-default" {
   filter {
     name   = "vpc-id"
-    values = [data.aws_vpc.aw_d-vpc-default.id]
+    values = [data.aws_vpc.ds_vpc-default.id]
   }
 }
 
-data "terraform_remote_state" "aw_d-tfstateremo-db" {
+data "terraform_remote_state" "ds-tfstateremo-db" {
   backend = "s3"
 
   config = {

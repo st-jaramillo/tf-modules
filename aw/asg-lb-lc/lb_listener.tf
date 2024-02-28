@@ -1,5 +1,5 @@
-resource "aws_lb_listener" "aw_lb-listener-webserverclusteralb" {
-  load_balancer_arn = aws_lb.aw_lb-webserverclusteralb.arn
+resource "aws_lb_listener" "aw_lb-listener" {
+  load_balancer_arn = aws_lb.aw_lb.arn
   port              = local.http_port
   protocol          = "HTTP"
 

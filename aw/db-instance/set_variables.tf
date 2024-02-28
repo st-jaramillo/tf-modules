@@ -1,37 +1,36 @@
-variable "udbadm" {
+variable "vr_udbadm" {
   description = "The username for the database"
   type        = string
   sensitive   = true
 }
 
-variable "pdbadm" {
+variable "vr_pdbadm" {
   description = "The password for the database"
   type        = string
   sensitive   = true
 }
 
-
-variable "env" {
+variable "vr_env" {
   description = "Define environment"
   type        = string
 }
 
-variable "engine" {
+variable "vr_engine" {
   description = "Define engine"
   type        = string
 }
 
-variable "allocated_storage" {
+variable "vr_allocated_storage" {
   description = "Define allocated_storage"
   type        = number
 }
 
-variable "instance_class" {
+variable "vr_instance_class" {
   description = "Define instance_class"
   type        = string
 }
 
-variable "db_name" {
+variable "vr_db_name" {
   description = "Define db_name"
   type        = string
 }

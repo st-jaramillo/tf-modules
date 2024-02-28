@@ -1,8 +1,8 @@
 resource "aws_lb_target_group" "aw_lb-targ-gro" {
-  name     = "${var.env}-AW-LB-TARG-GRO"
-  port     = var.srv_port_http
+  name     = "${var.vr_env}-aw-lb-targ-gro"
+  port     = var.vr_srvporthttp
   protocol = "HTTP"
-  vpc_id   = data.aws_vpc.aw_d-vpc-default.id
+  vpc_id   = data.aws_vpc.ds_vpc-default.id
 
   health_check {
     path                = "/"
