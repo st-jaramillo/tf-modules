@@ -18,8 +18,8 @@ resource "aws_launch_configuration" "aw_laun-conf" {
 
   user_data = templatefile("${path.module}/userdata_launchconf.sh", {
     userdata_serverport = var.vr_srvporthttp
-    userdata_dbaddress  = data.terraform_remote_state.ds-tfstateremo-db.outputs.op_srvclualbdb-predbmysaddress
-    userdata_dbport     = data.terraform_remote_state.ds-tfstateremo-db.outputs.op_srvclualbdb-predbmysport
+    userdata_dbaddress  = data.terraform_remote_state.ds-tfstateremo-db.outputs.op_clusrvalbdb-dbaddress
+    userdata_dbport     = data.terraform_remote_state.ds-tfstateremo-db.outputs.op_clusrvalbdb-dbport
   })
 
   lifecycle {

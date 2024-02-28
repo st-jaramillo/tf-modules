@@ -13,8 +13,8 @@ data "terraform_remote_state" "ds-tfstateremo-db" {
   backend = "s3"
 
   config = {
-    bucket = var.db_remote_state_bucket
-    key    = var.db_remote_state_key
+    bucket = var.vr_db-remote-state-bucket
+    key    = var.vr_db-remote-state-key
     region = "us-east-2"
   }
 }

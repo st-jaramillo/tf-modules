@@ -1,4 +1,4 @@
-resource "aws_security_group_rule" "allow_http_inbound" {
+resource "aws_security_group_rule" "aw_sgr_allowhttpinb" {
   type              = "ingress"
   security_group_id = aws_security_group.aw_sg_alb.id
 
@@ -8,7 +8,7 @@ resource "aws_security_group_rule" "allow_http_inbound" {
   cidr_blocks = local.all_ips
 }
 
-resource "aws_security_group_rule" "allow_all_outbound" {
+resource "aws_security_group_rule" "aw_sgr_allowallout" {
   type              = "egress"
   security_group_id = aws_security_group.aw_sg_alb.id
 

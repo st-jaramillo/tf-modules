@@ -1,10 +1,10 @@
 output "op_alb-dns-name" {
   description = "The domain name of the load balancer"
-  value       = aws_lb.aw_lb-webserverclusteralb.dns_name
+  value       = aws_lb.aw_lb.dns_name
 }
 
 output "op_asg_name" {
-  value       = aws_autoscaling_group.aw_auto-scag_lx.name
+  value       = aws_autoscaling_group.aw_auto-scag.name
   description = "The name of the Auto Scaling Group"
 }
 

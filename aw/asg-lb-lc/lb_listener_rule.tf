@@ -1,5 +1,5 @@
 resource "aws_lb_listener_rule" "aw_lb-listener-rule" {
-  listener_arn = aws_lb_listener.aw_lb-listener-webserverclusteralb.arn
+  listener_arn = aws_lb_listener.aw_lb-listener.arn
   priority     = 100
 
   condition {
